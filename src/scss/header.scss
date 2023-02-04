@@ -1,0 +1,67 @@
+.header {
+    background-color: #000;
+    &__container {
+        max-width: 1750px;
+        padding: 0px 15px;
+        margin: 0 auto;
+        @media(max-width:1750px) {
+            max-width: 1470px;
+        }
+        @media(max-width:1400px) {
+            max-width: 1054px;
+        }
+        @media(max-width:1023px) {
+            max-width: 797px;
+        }
+        @media(max-width:492px) {
+            max-width: 430px;
+        }
+    }
+
+    &__body {
+        padding: 40px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 65px;
+        color: #fff;
+    }
+
+    &__logo {
+    }
+
+    &__nav {
+    }
+
+    &__menu {
+    }
+
+    &__right {
+    }
+
+    &__link {
+    }
+
+    &__icon {
+    }
+
+    &__label {
+    }
+}
+
+.menu {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__link {
+    }
+}

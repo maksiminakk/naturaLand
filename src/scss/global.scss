@@ -1,0 +1,34 @@
+$ff1: 'Montserrat';
+$ff2: 'Jost';
+$ff3: 'Mulish';
+
+.container {
+    max-width: 1320px;
+    padding: 0px 15px;
+    @media(max-width:1439px) {
+        max-width: 1053px;
+    }
+    @media(max-width:1023px) {
+        max-width: 797px;
+    }
+    @media(max-width:767px) {
+        max-width: 620px;
+    }
+    @media(max-width:492px) {
+        max-width: 430px;
+    }
+}
+
+body {
+    font-family: $ff1, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 17px;
+}
+
+.link {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: $ff2;
+    font-size: 14px;
+    line-height: 130%;
+    color: #fff;
+}
