@@ -1,0 +1,218 @@
+.compound-info {
+    background-color: #f3f3f3;
+    padding: 130px 0px;
+    @media(max-width:492px) {
+        padding: 285px 0px 60px 0px;
+    }
+    &__container {
+        position: relative;
+    }
+
+    &__body {
+    }
+
+    &__image {
+        position: absolute;
+        left: -100px;
+        top: -230px;
+        transition: all 15s ease 0s;
+        // animation-duration: 50s;
+        // animation-timing-function: ease-out;
+        // animation-iteration-count: infinite;
+        &:hover {
+            // animation-timing-function: linear;
+            // animation-duration: 60s;
+            transition: all 30s ease 0s;
+            transform: rotate(360deg);
+        }
+        img {
+            width: 770px;
+            @media(max-width:1399px) {
+                width: 550px;
+            }
+            @media(max-width:767px) {
+                width: 100%;
+                height: 100%;
+                
+            }
+            @media(max-width:492px) {
+                max-width: 375px;
+            }
+        }
+        @media(max-width:1399px) {
+            left: 0;
+            top: 0;
+        }
+        @media(max-width:1023px) {
+            top: -200px;
+        }
+        @media(max-width:492px) {
+            top: -365px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 165px;
+        @media(max-width:1399px) {
+            gap: 0;
+            margin-bottom: 90px;
+        }
+        @media(max-width:1023px) {
+            flex-direction: column;
+        }
+        @media(max-width:492px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__left {
+        flex: 0 0 660px;
+        @media(max-width:1399px) {
+            flex: 0 0 550px;
+        }
+        @media(max-width:1023px) {
+            flex: 0 0 360px;
+        }
+        @media(max-width:492px) {
+            display: none;
+        }
+    }
+
+    &__right {
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        span {
+            font-weight: 500;
+
+        }
+        i {
+            color: $orange;
+            font-size: 36px;
+            font-style: normal;
+            
+        }
+    }
+
+    &__text {
+        margin-bottom: 90px;
+        @media(max-width:1023px) {
+            margin-bottom: 40px;
+        }
+        @media(max-width:492px) {
+            margin: 0;
+        }
+    }
+
+    &__bottom {
+        @media(max-width:492px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 30px;
+        @media(max-width:1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media(max-width:492px) {
+            gap: 10px;
+        }
+        @media(max-width:359px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:hover {
+            .compound-info__icon {
+                
+                animation: iconAnim 1.5s linear infinite;
+                
+            }
+        }
+    }
+
+    &__icon {
+        width: 80px;
+        height: 80px;
+        background-color: $orange;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 28px;
+        transition: all 0.4s ease 0s;
+        position: relative;
+        @media(max-width:492px) {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 20px;
+        }
+        
+    }
+
+    &__label {
+        font-size: 15px;
+        font-weight: 600;
+        font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+        line-height: 130%;
+        text-align: center;
+        text-transform: uppercase;
+        @media(max-width:492px) {
+            font-size: 11px;
+        }
+    }
+}
+
+.animal-banner {
+    padding-bottom: 90px;
+    margin: 0;
+    @media(max-width:767px) {
+        padding-bottom: 0;
+    }
+}
+
+.animal-banner__button {
+    display: inline-flex;
+    margin-top: 60px;
+    @media(max-width:767px) {
+        margin-top: 40px;
+    }
+}
+
+@keyframes iconAnim {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: -15px;
+    }
+    50% {
+       top: -30px;
+    }
+    75% {
+        top: -15px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes imageAnim {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+       @@include('html/header.html', {})
+        <main class="main">
+            @@include('html/about-company-intro.html', {})
+            @@include('html/about-company-banner.html', {})
+            @@include('html/about-company-benefits.html', {})
+            @@include('html/about-company-banner-2.html', {})
+            @@include('html/about-company-info.html', {})
+            @@include('html/quality.html', {})
+            @@include('html/about-company-news.html', {})
+            @@include('html/community.html', {})
+        </main>
+        @@include('html/footer.html', {})
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" type="text/javascript"></script>
+    <script src="js/app.js"></script>
+    
+    </script>
+</body>
+
+</html>

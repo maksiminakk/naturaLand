@@ -1,0 +1,394 @@
+.food-benefits {
+    position: relative;
+    background-color: #f3f3f3;
+    padding: 130px 0px 150px 0px;
+
+    @media(max-width:1399px) {
+        padding-bottom: 250px;
+    }
+
+    @media(max-width:1023px) {
+        padding-bottom: 0;
+        padding-top: 60px;
+    }
+
+    &__container {}
+
+    &__body {
+        @media(max-width:1023px) {
+            position: relative;
+        }
+    }
+
+    &__top {
+        text-align: center;
+        margin-bottom: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        max-width: 900px;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+
+        @media(max-width:1023px) {
+            position: static;
+        }
+    }
+
+    &__row {
+        // display: grid;
+        gap: 300px;
+        // grid-template-columns: repeat(2, 1fr);
+        // break-inside: avoid-column;
+        // grid-template-areas: "item-1 item-4"
+        //                     "item-2 banner"    
+        //                     "item-3 banner";
+        columns: 2;
+
+        @media(max-width:1399px) {
+            gap: 150px;
+        }
+
+        @media(max-width:1023px) {
+            gap: 40px;
+            columns: inherit;
+        }
+
+        @media(max-width:492px) {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 3;
+
+        &:nth-child(3) {
+            margin: 0;
+        }
+
+        @media(min-width:1023px) {
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                flex-direction: row-reverse;
+                text-align: right;
+            }
+
+        }
+
+        // &:first-child {
+        //     grid-area: item-1;
+        //     flex-direction: row-reverse;
+        //     text-align: right;
+        // }
+        // &:nth-child(2) {
+        //     grid-area: item-2;
+        //     flex-direction: row-reverse;
+        //     text-align: right;
+        // }
+        // &:nth-child(3) {
+        //     grid-area: item-3;
+        //     flex-direction: row-reverse;
+        //     text-align: right;
+        // }
+        // &:nth-child(4) {
+        //     grid-area: item-4;
+        // }
+    }
+
+    &__banner {
+        grid-area: banner;
+    }
+
+    &__images {
+        position: absolute;
+        left: 40%;
+        top: 0;
+        width: 540px;
+        height: 600px;
+
+        @media(max-width:1399px) {
+            width: 328px;
+            height: 375px;
+            // bottom: -20%;
+            // top: inherit;
+            top: 40%;
+            left: 45%;
+        }
+
+        @media(max-width:1023px) {
+            position: relative;
+
+        }
+
+        @media(max-width:492px) {
+            left: 30%;
+            top: -120px;
+        }
+    }
+
+    &__image {
+        &._main {
+            img {
+                position: absolute;
+                width: 367px;
+                left: 0;
+                top: 50px;
+
+                @media(max-width:1399px) {
+                    width: 220px;
+                }
+            }
+        }
+
+        &._sub {
+            img {
+                position: absolute;
+                left: -28%;
+                bottom: 0;
+
+                @media(max-width:1399px) {
+                    width: 200px;
+                }
+            }
+
+        }
+    }
+
+    &__change-images {}
+
+    &__change-images {
+        width: 400px;
+        height: 230px;
+        position: absolute;
+        bottom: -50px;
+        right: 15%;
+
+        @media(max-width:1399px) {
+            width: 240px;
+            height: 120px;
+        }
+    }
+
+    &__change-image {
+        animation-name: updateImage;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        opacity: 0;
+
+        img {
+            position: absolute;
+            width: 400px;
+            height: 230px;
+
+            left: 0;
+            right: 0;
+            object-fit: cover;
+
+            @media(max-width:1399px) {
+                width: 240px;
+                height: 120px;
+            }
+        }
+
+        &_1 {
+            animation-delay: 1s;
+        }
+
+        &_2 {
+            animation-delay: 4s;
+        }
+
+        &_3 {
+            animation-delay: 8s;
+        }
+    }
+
+    &__bg {
+
+        img,
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media(max-width:1023px) {
+            display: none;
+        }
+    }
+}
+
+
+
+.food-benefits-item {
+    display: flex;
+    gap: 30px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    padding: 20px;
+    transition: all 0.4s ease 0s;
+    border-radius: 20px;
+
+    @media(max-width:492px) {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        padding: 50px 15px 30px 15px;
+
+        &:nth-child(1),
+        &:nth-child(3) {
+
+            background: #FFFFFF;
+            box-shadow: 0px 2px 30px rgba(73, 76, 77, 0.1);
+            border-radius: 20px;
+        }
+    }
+
+    &:hover {
+        background: #FFFFFF;
+        box-shadow: 0px 2px 30px rgba(73, 76, 77, 0.1);
+        border-radius: 20px;
+
+        .food-benefits-item__icon {
+            transform: scale(1.2);
+        }
+    }
+
+    &__left {}
+
+    &__icon {
+        background-color: $orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        flex: 0 0 80px;
+        transition: all 0.4s ease 0s;
+        margin-top: 10px;
+
+        @media(max-width:492px) {
+            position: absolute;
+            left: calc(50% - 40px);
+            top: -40px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 140%;
+        font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    &__text {}
+}
+
+.food-benefits-banner {
+    background-color: #fff;
+    padding: 40px 25px 40px 180px;
+    break-inside: avoid;
+    width: 110%;
+    position: relative;
+    left: -10%;
+    page-break-inside: avoid;
+    border-radius: 20px;
+
+    @media(max-width:1023px) {
+        padding: 30px 15px 40px 15px;
+        width: 100%;
+        left: 0;
+    }
+
+    @media(max-width:492px) {
+        position: relative;
+        top: -30px;
+    }
+
+    &__main-title {
+        font-size: 96px;
+        font-weight: 500;
+        color: $orange;
+        font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: 120%;
+    }
+
+    &__text {}
+}
+
+@keyframes updateImage {
+
+    // 0% {
+    //     opacity: 0;
+    // }
+
+    // 12% {
+    //     opacity: 1;
+    // }
+
+    // 35% {
+    //     opacity: 1;
+    // }
+
+    // 20% {
+    //     opacity: 1;
+    // }
+
+    // 80% {
+    //     opacity: 0;
+    // }
+
+    // 100% {
+    //     opacity: 0;
+    // }
+
+    30%, 100% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+
+}

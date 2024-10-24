@@ -1,27 +1,385 @@
 $ff1: 'Montserrat';
 $ff2: 'Jost';
 $ff3: 'Mulish';
+$orange: #FF671D;
+$black: #1D1D1B;
+$blue: #62CCCA;
+$gray: #9D9D9D;
+$textColor: #414141;
+$bgColor: #F3EBE1;
+$bgColorMain: #f3f3f3;
+
+._dog-page-template {
+    .button {
+        &:hover {
+            background-color: $blue;
+        }
+    }
+    .sub-button {
+        &:hover {
+            background: transparent;
+            color: $blue;
+            border: 1px solid $blue;
+        }
+        
+    }
+    .community-banner__sub-row .community-social__item {
+        background-color: $blue;
+        &:before {
+            background-color: $blue;
+        }
+    }
+
+    .community-item {
+        &:hover {
+            .community-item__right {
+                svg path {
+                    fill: $blue;
+                }
+            }
+        }
+    }
+}
 
 .container {
     max-width: 1320px;
     padding: 0px 15px;
-    @media(max-width:1439px) {
+    margin: 0 auto;
+
+    @media(max-width:1399px) {
         max-width: 1053px;
     }
+
     @media(max-width:1023px) {
         max-width: 797px;
     }
+
     @media(max-width:767px) {
         max-width: 620px;
     }
+
     @media(max-width:492px) {
         max-width: 430px;
     }
 }
 
+.spoller-button {
+    display: none;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    gap: 5px;
+    transition: all 0.4s ease 0s;
+    font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+
+    &:before {
+        content: "развернуть";
+        display: block;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        background-image: url(../img/icons/spoller-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 10px;
+        flex: 0 0 10px;
+        height: 5px;
+        transition: all 0.4s ease 0s;
+    }
+
+    @media(max-width:492px) {
+        display: inline-flex;
+    }
+
+    &._active {
+        &:after {
+            transform: rotate(180deg);
+        }
+
+        &:before {
+            content: "свернуть";
+        }
+
+        color: $orange;
+    }
+}
+
+.section {
+    padding: 75px 0px;
+
+    @media(max-width:767px) {
+        padding: 45px 0px;
+    }
+
+    &__top {
+        margin-bottom: 40px;
+    }
+}
+
+.input {
+    height: 48px;
+    padding: 0 0 0px 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+    border: 1px solid #fff;
+    &::placeholder {
+        font-size: 15px;
+        color: #9D9D9D;
+        transition: all 0.4s ease 0s;
+
+        @media(max-width:492px) {
+            color: #414141;
+            font-size: 14px;
+
+        }
+    }
+
+    &._error {
+        border: 1px solid red;
+    }
+
+    @media(max-width:492px) {
+        padding: 0 0px 0px 16px;
+    }
+
+    &:focus {
+        &::placeholder {
+            color: $orange;
+        }
+    }
+
+    &:hover {
+        &::placeholder {
+            color: $orange;
+        }
+    }
+}
+
+textarea {
+    @media(max-width:492px) {
+        padding: 16px;
+    }
+}
+
+.registration-form__area {
+    @media(max-width:492px) {
+        padding: 16px;
+    }
+}
+
+.sub-title {
+    font-size: 30px;
+    line-height: 160%;
+    font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+
+    @media(max-width:767px) {
+        font-size: 24px;
+        line-height: 135%;
+
+    }
+}
+
+.sub-title-item {
+    font-size: 24px;
+    line-height: 160%;
+    font-weight: 500;
+    font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+
+    @media(max-width:767px) {
+        font-size: 24px;
+        line-height: 135%;
+
+    }
+}
+
+
+.slider-button {
+    width: 60px;
+    height: 60px;
+    flex: 0 0 60px;
+    border-radius: 50%;
+    background-color: $orange;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease 0s;
+    justify-content: center;
+    z-index: 10;
+    &:hover {
+        transform: scale(1.2);
+    }
+    &:before {
+        background-image: url(../img/icons/slider-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+
+        @media(max-width:1200px) {
+            width: 6px;
+            height: 6px;
+        }
+    }
+
+    &._small {
+        width: 37.5px;
+        height: 37.5px;
+        flex: 0 0 37.5px;
+    }
+
+    @media(max-width:1440px) {
+        width: 45px;
+        height: 45px;
+        flex: 0 0 45px;
+    }
+
+    @media(max-width:1200px) {
+        width: 30px;
+        height: 30px;
+        flex: 0 0 30px;
+    }
+}
+
+.set-rating-block {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    min-height: 60px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.set-rating-block input {
+    width: 18px;
+    height: 18px;
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    border: 0;
+    background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M18 6.88l-6.54-.45L9 0 6.53 6.43 0 6.88l5.01 4.42L3.37 18 9 14.3l5.63 3.7-1.65-6.7L18 6.88z' fill='%23FF671D'/%3E%3C/svg%3E") no-repeat center center/contain;
+}
+
+.set-rating-block input:checked,.set-rating-block input:focus,.set-rating-block input:hover {
+    outline: none;
+    background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M18 6.88l-6.54-.45L9 0 6.53 6.43 0 6.88l5.01 4.42L3.37 18 9 14.3l5.63 3.7-1.65-6.7L18 6.88z' fill='%23FF671D'/%3E%3C/svg%3E") no-repeat center center/contain
+}
+
+.set-rating-block input:checked~input,.set-rating-block input:focus~input,.set-rating-block input:hover~input, .rating-block .block-stars .star.disabled {
+    background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M18 6.88l-6.54-.45L9 0 6.53 6.43 0 6.88l5.01 4.42L3.37 18 9 14.3l5.63 3.7-1.65-6.7L18 6.88z' fill='%23cacaca'/%3E%3C/svg%3E")
+}
+
+.slider-button-next {
+    transform: rotate(180deg);
+    &:hover {
+        transform: rotate(180deg) scale(1.2);
+    }
+}
+
+.scroll-button {
+    transform: rotate(-90deg);
+    &:before {
+        background-image: url(../img/icons/scroll-arrow.svg);
+        @media(max-width:1200px) {
+            width: 8px;
+            height: 8px;
+        }
+    }
+    @media(max-width:1200px) {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+    }
+
+    &:hover {
+        transform: scale(1.2) rotate(-90deg);
+    }
+}
+
+
+
 body {
     font-family: $ff1, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 17px;
+    font-size: 14px;
+    color: $black;
+
+    &._lock {
+        overflow: hidden;
+    }
+
+}
+
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 100%;
+}
+
+.title {
+    @include adaptiv-value("font-size", 44, 32, 1);
+    line-height: 120%;
+    font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+    span {
+        font-weight: 500;
+    }
+}
+
+.where-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    color: $orange;
+    font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 125%;
+    transition: all 0.4s ease 0s;
+    svg {
+        display: block;
+        width: 18px;
+        height: 18px;
+        flex: 0 0 18px;
+        transition: all 0.4s ease 0s;
+
+        @media(max-width:767px) {
+            height: 14px;
+            width: 12.5px;
+            flex: 0 0 12.5px;
+        }
+
+        path {
+            transition: all 0.4s ease 0s;
+        }
+    }
+
+    &:hover {
+        color: #fff;
+
+        svg path {
+            fill: #fff;
+        }
+    }
 }
 
 .link {
@@ -31,4 +389,239 @@ body {
     font-size: 14px;
     line-height: 130%;
     color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease 0s;
+
+    &:hover {
+        color: $orange;
+    }
+
+    @media(max-width:767px) {
+        font-weight: 500;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 0px;
+    }
 }
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease 0s;
+    padding: 20px 40px;
+    font-size: 16px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+    color: #fff;
+    background-color: $black;
+
+    &:hover {
+        background-color: $orange;
+    }
+
+    &._cat {
+        color: $orange;
+        background: transparent;
+        border: 1px solid $orange;
+        font-size: 18px;
+        font-weight: 500;
+
+        &:hover {
+            background: $orange;
+            color: #fff;
+        }
+
+        &_pull {
+            color: #fff;
+            font-weight: 500;
+            font-size: 14px;
+            background-color: $orange;
+            border: 1px solid $orange;
+
+            &:hover {
+                background-color: #fff;
+                color: $black;
+                border: 1px solid $black;
+            }
+        }
+    }
+
+
+    &._dog {
+        font-size: 18px;
+        color: $blue;
+        font-weight: 500;
+        background: transparent;
+        border: 1px solid $blue;
+
+        &:hover {
+            background: $blue;
+            color: #fff;
+        }
+    }
+
+}
+
+.wb-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    transition: all 0.4s ease 0s;  
+    background: linear-gradient(90deg, #CB11AB 0%, #990099 51.04%, #481173 100%);
+    border-radius: 6px;
+    @media(max-width:767px) {
+        padding: 20px;
+        img {
+            width: 85%;
+        }
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.sub-button {
+    font-size: 14px;
+    color: $black;
+    background: transparent;
+    border: 1px solid $black;
+    border-radius: 6px;
+    display: inline-flex;
+
+    &:hover {
+        color: #fff;
+        background-color: $black;
+    }
+
+}
+
+.page-section {
+    padding: 66px 0px 130px 0px;
+
+    @media(max-width:1023px) {
+        padding: 40px 0px 90px 0px;
+    }
+
+    @media(max-width:767px) {
+        padding: 20px 0px 90px 0px;
+    }
+
+    &__white-item {
+        color: #fff;
+        &:after {
+            color: #9d9d9d;
+        }
+        &:last-child {
+            color: #9d9d9d;
+        }
+    }
+
+    &__body {}
+
+    &__nav {}
+
+    &__title {}
+}
+
+.page-section-nav {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    &__body {
+        overflow: auto;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        width: 100%;
+        min-height: 40px;
+    }
+    &__item {
+        font-size: 12px;
+        color: $black;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+
+        &:after {
+            content: "-";
+            display: block;
+
+        }
+
+        &:last-child {
+            color: #9D9D9D;
+
+            &:after {
+                display: none;
+            }
+        }
+
+    }
+
+    &__white-item {
+        color: #fff;
+        &:after {
+            color: #9d9d9d;
+        }
+        &:last-child {
+            color: #9d9d9d;
+        }
+    }
+}
+
+.small-label {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+
+    @media(max-width:767px) {
+        font-size: 17px;
+    }
+}
+
+.text {
+    font-size: 15px;
+    line-height: 170%;
+    color: $textColor;
+
+    @media(max-width:767px) {
+        font-size: 14px;
+    }
+}
+
+.main-text {
+    font-size: 17px;
+    line-height: 170%;
+
+    @media(max-width:767px) {
+        font-size: 15px;
+    }
+}
+
+.big-label {
+    font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 130%;
+
+    @media(max-width:767px) {
+        font-size: 20px;
+    }
+}
+
+._no-transform {
+    * {
+        transform: none;
+    }
+}
+

@@ -1,0 +1,23 @@
+.promo-banner {
+  padding: 100px 0px;
+}
+.promo-banner._gray {
+  background-color: #DBDCE0;
+}
+@media (max-width: 767px) {
+  .promo-banner {
+    padding: 60px 0px;
+  }
+}
+.promo-banner__body {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .promo-banner__body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+}

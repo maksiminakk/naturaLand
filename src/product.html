@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+       @@include('html/header.html', {})
+        <main class="main _cat-template">
+            @@include('html/product-intro.html', {})
+            @@include('html/product-components.html', {})
+            @@include('html/product-compound.html', {})
+            @@include('html/product-recomendation.html', {})
+            @@include('html/product-benefits-section.html', {})
+            @@include('html/reviews-items-section.html', {})
+            @@include('html/other-products.html', {})
+            @@include('html/promo-banner.html', {})
+        </main>
+        @@include('html/footer.html', {})
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" type="text/javascript"></script>
+    <script src="js/app.js"></script>
+    
+    </script>
+</body>
+
+</html>

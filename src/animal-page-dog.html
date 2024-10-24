@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+       @@include('html/header.html', {})
+        <main class="main _dog-page-template">
+            @@include('html/animal-intro-dog.html', {})
+            @@include('html/products-preview-dog.html', {})
+            @@include('html/compound-info-dog.html', {})
+            @@include('html/animal-banner-dog.html', {})
+            @@include('html/calculator-block-dog.html', {})
+            @@include('html/promo-banner-gray.html', {})
+            @@include('html/reviews-section.html', {})
+            @@include('html/community-banner-dog.html', {})
+            @@include('html/about-company-news-padding.html', {})
+        </main>
+        @@include('html/footer-dog.html', {})
+    </div>
+    @@include('html/modal.html', {})
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<b231b81d-f535-4d7c-a0f6-75122791fd24>&lang=ru_RU"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/imageAnim.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/map.js"></script>
+    </script>
+</body>
+
+</html>

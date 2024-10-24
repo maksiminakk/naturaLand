@@ -1,0 +1,59 @@
+.about-company-news {
+    &._indent {
+        padding: 150px 0px;
+    }
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__row {
+        @media(max-width:492px) {
+            width: calc(100% + 15px);
+            position: relative;
+            
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 60px;
+        @media(max-width:1023px) {
+            display: flex;
+            gap: 0;       
+        }
+
+        
+    }
+
+    &__slide {
+        @media(max-width:1023px) {
+            width: auto;
+        }
+    }
+
+    .news-page-item {
+        @media(max-width:1023px) {
+            width: 370px;
+        }
+        @media(max-width:492px) {
+            width: 270px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__button {
+        @media(max-width:492px) {
+            width: 100%;
+            display: flex;
+        }
+    }
+}

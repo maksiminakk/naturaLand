@@ -1,0 +1,229 @@
+.products-items-intro {
+    padding: 60px 0px 80px 0px;
+    @media(max-height:900px) {
+        padding: 60px 0px 50px 0px;
+    }
+    background-color: #000;
+    min-height: calc(100vh - 135px);
+    position: relative;
+    overflow: hidden;
+    @media(max-width:1023px) {
+        padding: 20px 0px 25px 0px;
+    }
+    .reviews-page-nav {
+        margin-bottom: 60px;
+        &__item {
+            color: #fff;
+            &:last-child {
+                color: #9d9d9d;
+            }
+        }
+        @media(max-height:900px) {
+            margin-bottom: 40px;
+        }
+        @media(max-width:1023px) {
+            margin-bottom: 40px;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__body {
+        margin-bottom: 200px;
+        display: flex;
+        gap: 90px;
+        flex: 1 1 100%;
+        position: relative;
+        z-index: 1;
+        @media(max-height:900px) {
+            margin-bottom: 80px;
+        }
+        @media(max-width:1399px) {
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        @media(max-width:1023px) {
+            flex-direction: column;
+            margin: 0;
+            gap: 0;
+        }
+    }
+
+    &__left {
+    }
+
+    
+
+    &__label {
+        color: $orange;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 175%;
+        @media(max-width:1023px) {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 120%;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        @media(max-width:1023px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        color: #fff;
+        @media(max-height:900px) {
+            font-size: 15px;
+        }
+    }
+
+    &__right {
+        flex: 0 0 560px;
+        position: relative;
+        top: -80px;
+        right: 0;
+        @media(max-width:1399px) {
+            flex: 0 0 400px;
+            top: 0;
+        }
+        @media(max-width:1023px) {
+            top: -15px;
+            flex: 0 0 340px;
+        }
+    }
+
+    &__images {
+        position: absolute;
+        width: 560px;
+        height: 575px;
+        @media(max-width:1440px) {
+            width: 400px;
+            height: 420px;
+        }
+        @media(max-width:1023px) {
+            width: 328px;
+            height: 340px;
+        }
+    }
+
+    &__image {
+        img {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 430px;
+           
+            z-index: 2;
+            object-fit: cover;
+            @media(max-width:1440px) {
+                width: 320px;
+            }
+            @media(max-width:1023px) {
+                width: 250px;
+            }
+        }
+    }
+
+    &__animal-image {
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 365px;
+            
+            object-fit: cover;
+            z-index: 1;
+            @media(max-width:1440px) {
+                width: 300px;
+            }
+            @media(max-width:1023px) {
+                width: 215px;
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        position: relative;
+        z-index: 1;
+        @media(max-width:1023px) {
+            display: none;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        color: #fff;
+        flex: 0 1 410px;
+        .product-benefits-item__icon {
+            margin: 0;
+        }
+        .product-benefits-item__label {
+            font-size: 16px;
+        }
+    }
+
+    &__bg {
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            @media(max-width:492px) {
+                object-position: top;
+                top: inherit;
+                bottom: -50px;
+            }
+        }
+    }
+}
+.container {
+}
+.reviews-page {
+
+    &__nav {
+    }
+}
+.reviews-page-nav {
+
+    &__item {
+    }
+}
+.page-section {
+
+    &__nav {
+    }
+}
+.page-section-nav {
+
+    &__body {
+    }
+
+    &__item {
+    }
+}
+
+.product-benefits-item {
+
+    &__icon {
+    }
+
+    &__title {
+    }
+}

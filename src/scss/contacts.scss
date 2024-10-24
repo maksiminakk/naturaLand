@@ -1,0 +1,202 @@
+.contacts {
+
+    &__body {}
+
+    &__label {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 120%;
+        color: #9D9D9D;
+        margin-bottom: 5px;
+
+        @media(max-width:767px) {
+            font-size: 12px;
+        }
+    }
+
+    &__title {
+        margin: 0 0 10px 0;
+    }
+
+    &__top {
+        margin-bottom: 70px;
+        @media(max-width:767px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__sublabel {
+        color: #666;
+        @media(max-width:492px) {
+            color: rgba(65, 65, 65, 0.6);
+        }
+    }
+
+    &__content {
+        display: flex;
+
+        @media(max-width:767px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__form {
+        flex: 0 1 880px/1290px * 100%;
+
+        @media(max-width:1399px) {
+            flex: 0 1 960px/1290px * 100%;
+        }
+
+        position: relative;
+        z-index: 1;
+
+        @media(max-width:1023px) {
+            flex: 0 1 50%;
+        }
+
+        .registration-form__sublabel {
+            color: $black;
+        }
+
+        .input {
+            background-color: #f3f3f3;
+
+            &:focus,
+            &:hover {
+                box-shadow: 0px 2px 16px rgba(73, 76, 77, 0.1);
+                background-color: #fff;
+            }
+        }
+
+        .feedback-form-item__file-button {
+            color: $textColor;
+            span &:after {
+                border-bottom: 1px dashed $black;
+            }
+        }
+
+        .feedback-form-item__add-file {
+            @media(max-width:1023px) {
+                margin-bottom: 24px;
+            }
+        }
+
+        .feedback-form__button-switch {
+            background-color: #f3f3f3;
+            
+        }
+
+        .dropdown__button {
+            color: $textColor;
+        }
+
+        @media(max-width:492px) {
+            .feedback-form__bottom {
+                flex-direction: column;
+            }
+            .feedback-form__text {
+                flex: auto;
+            }
+            .registration-form__item {
+                &:nth-child(2) {
+                    flex: 0 0 calc(50% - 10px);
+                }
+                &:nth-child(3) {
+                    flex: 0 0 calc(50% - 10px);
+                }
+            }
+            .input {
+                font-size: 14px;
+                &::placeholder {
+                    font-size: 14px;
+                    color: #9D9D9D;
+                }
+            }
+        }
+
+    }
+
+    &__right {
+        flex: 0 1 440px/1290px * 100%;
+        position: relative;
+
+        @media(max-width:1399px) {
+            flex: 0 1 360px/1290px * 100%;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        bottom: -30px;
+        left: -50px;
+
+        img {
+            max-width: 600px;
+
+            @media(max-width:1399px) {
+                max-width: 450px;
+            }
+
+            @media(max-width:767px) {
+                max-width: 360px;
+            }
+        }
+
+        @media(max-width:767px) {
+            position: static;
+        }
+    }
+}
+
+
+
+.feedback-form-item {
+
+    &__dropdown {}
+
+    &__add-file {}
+
+    &__file-input {}
+
+    &__file-button {}
+}
+
+.dropdown {
+
+    &__body {}
+
+    &__content {}
+
+    &__button {}
+
+    &__list {}
+
+    &__list-item {}
+
+    &__input-hidden {}
+}
+
+.feedback-form {
+
+    &__label {}
+
+    &__bottom {}
+
+    &__bottom-left {}
+
+    &__right {}
+
+    &__switches {}
+
+    &__button-switch {}
+
+    &__bottom-switch {}
+
+    &__text {}
+
+    &__bottom-right {}
+
+    &__button {}
+}

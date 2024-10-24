@@ -1,0 +1,43 @@
+._dog-page-template {
+    .animal-intro__number-items {
+        color: $blue;
+    }
+    .animal-intro-item__icon {
+        svg path {
+            fill: $blue;
+        }
+    }
+
+    .scroll-button {
+        background-color: $blue;
+    }
+    .slider-button {
+        background-color: $blue;
+    }
+
+    .compound-info__icon {
+        background-color: $blue;
+    }
+    .product-components-message__title {
+        span {
+            color: $blue;
+        }
+    }
+    .title {
+        i {
+            color: $blue;
+        }
+    }
+    .community-social__item {
+        background-color: $blue;
+    }
+
+    .community-item__icon {
+        svg path {
+            fill: $blue;
+        }
+    }
+
+
+    
+}

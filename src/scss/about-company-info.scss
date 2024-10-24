@@ -1,0 +1,236 @@
+.about-company-info {
+
+    &__container {
+        @media(max-width:1439px) {
+            padding: 0px 32px;
+        }
+        @media(max-width:492px) {
+            padding: 0px 0 0px 16px;
+        }
+    }
+
+    &__body {
+        position: relative;
+    }
+
+    &__top {
+        margin-bottom: 60px;
+        @media(max-width:1023px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title {
+        max-width: 970px;
+
+        h3 {
+            font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+            line-height: 140%;
+            @include adaptiv-value("font-size", 26, 18, 1);
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 60px;
+        
+        margin-bottom: 75px;
+        @media(max-width:1023px) {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    &__left {
+        flex: 0 1 100%;
+    }
+
+    &__text {
+        color: $textColor;
+    }
+
+    &__right {
+        flex: 0 0 380px;
+        position: relative;
+        @media(max-width:1023px) {
+            flex: inherit;
+        }
+    }
+
+    &__item-body {
+        transform: translate(0,150%);
+        transition: all 0.8s ease 0s;
+    }
+
+    &__item {
+        position: relative;
+        bottom: 75px;
+        @media(max-width:1023px) {
+            bottom: 0;
+            display: inline-block;
+        }
+        &._visible {
+            .about-company-info__item-body {
+                transform: translate(0,0);    
+            }
+            
+        }
+        
+    }
+
+   
+
+    &__benefit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        flex-direction: column;
+
+        &_big {
+            width: 320px;
+            height: 320px;
+
+            background-color: $orange;
+
+            color: #fff;
+            @media(max-width:1023px) {
+                width: 277px;
+                height: 277px;
+
+            }
+        }
+
+        &_small {
+            background-color: #f3f3f3;
+            width: 162px;
+            height: 162px;
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            @media(max-width:1023px) {
+                right: -50px;
+                width: 140px;
+                height: 140px;
+            }
+        }
+    }
+
+    &__label {
+        font-size: 38px;
+        font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+        font-weight: 600;
+        margin-bottom: 10px;
+
+        @media(max-width:1023px) {
+            font-size: 33px;
+        }
+    }
+
+    &__sublabel {
+        font-size: 32px;
+        @media(max-width:1023px) {
+            font-size: 18px;
+        }
+        font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    &__subtext {
+        font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+        line-height: 125%;
+        max-width: 110px;
+        text-align: center;
+    }
+
+    .reviews-page-sub-slider__slider-button {
+        @media(max-width:1440px) {}
+    }
+
+    .reviews-page-sub-slider__slider-button-next {
+        @media(max-width:1440px) {
+            right: -60px;
+        }
+        @media(max-width:1200px) {
+            right: -30px;
+        }
+    }
+
+    .reviews-page-sub-slider__slider-button-prev {
+        @media(max-width:1440px) {
+            left: -60px;
+        }
+        @media(max-width:1200px) {
+            left: -30px;
+        }
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__slider {}
+
+    &__wrapper {}
+
+    &__slide {
+        @media(max-width:1023px) {
+            width: auto;
+        }
+        
+    }
+
+    &__image-on-slider {
+        border-radius: 20px 60px 0px; 
+        position: relative;
+        display: block;
+        padding-bottom: 260px;
+        @media(max-width:1023px) {
+            width: 340px;
+        }
+        @media(max-width:767px) {
+            border-radius: 10px 30px 0px;
+            padding-bottom: 230px;
+            width: 280px;
+        }
+        img {
+            border-radius: 20px 60px 0px;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @media(max-width:767px) {
+                border-radius: 10px 30px 0px;
+            }
+        }
+    }
+    
+}
+
+.section {}
+
+.container {}
+
+.main-text {}
+
+.reviews-page-sub-slider {
+
+    &__slider-button {}
+
+    &__slider-button-prev {}
+
+    &__slider-button-next {}
+}
+
+.slider-button {}
+
+.slider-button-prev {}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.slider-button-next {}

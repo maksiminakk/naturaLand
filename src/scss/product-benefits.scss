@@ -1,0 +1,57 @@
+.product-benefits {
+    padding: 130px 0px;
+    background-color: $black;
+    @media(max-width:1023px) {
+        padding: 90px 0px;
+    }
+    color: #fff;
+
+    &__container {}
+
+    &__body {}
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 60px;
+        @media(max-width:1023px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        @media(max-width:492px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+    }
+
+    &__item {}
+}
+
+.product-benefits-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    &__icon {
+        margin-bottom: 30px;
+        @media(max-width:1023px) {
+            margin-bottom: 15px;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+    &__title {
+        font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 140%;
+        text-transform: uppercase;
+        @media(max-width:1023px) {
+            font-size: 16px;
+        }
+
+    }
+}

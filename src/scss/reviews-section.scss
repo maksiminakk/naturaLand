@@ -1,0 +1,129 @@
+.reviews-section {
+    padding: 100px 0px 130px 0px;
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__top {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        margin-bottom: 55px;
+    }
+
+    &__label {
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        max-width: 1000px;
+    }
+
+    &__content {
+        margin-bottom: 60px;
+        @media(max-width:492px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    
+
+    &__wrapper {
+        
+        @media(min-width:1023px) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 65px 25px;
+            align-items: stretch;
+            justify-content: stretch;
+        }
+    }
+
+    &__slide {
+        display: block;
+        height: 100%;
+        @media(min-width:1023px) {
+            
+            flex: 0 1 calc(33% - 12.5px);
+            &:nth-child(1) {
+                flex: 0 1 calc(66% - 7.5px);
+                @media(max-width:1399px) {
+                    flex: 0 1 calc(50% -  12.5px);
+                }
+            }
+            @media(max-width:1399px) {
+                flex: 0 1 calc(50% -  12.5px);
+            }
+        }
+        @media(max-width:1023px) {
+            width: auto;
+            .reviews-page-item {
+                width: 270px;
+                
+            }
+            &:first-child {
+                .reviews-page-item {
+                    display: none;
+                }
+                display: none;
+            }
+            
+        }
+
+
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        @media(max-width:492px) {
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: stretch;
+            gap: 10px;
+        }
+    }
+
+    &__button {
+        width: 206px;
+        white-space: nowrap;
+        font-weight: 500;
+        font-size: 14px;
+        @media(max-width:492px) {
+            display: flex;
+            width: 100%;
+        }
+    }
+}
+
+
+._no-transform {
+    * {
+        transform: none;
+    }
+    .reviews-page-item {
+        transform: none;
+    }
+}
+
+.reviews-items-section {
+    .reviews-page-sub-slider__slider-button-next {
+        @media(max-width:1440px) {
+            right: -50px;
+        }
+    }
+
+    .reviews-page-sub-slider__slider-button-prev {
+        @media(max-width:1440px) {
+            left: -50px;
+        }
+    }
+}

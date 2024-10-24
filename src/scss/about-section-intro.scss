@@ -1,0 +1,91 @@
+.about-company-intro {
+
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__nav {
+    }
+
+    &__content {
+    }
+
+    &__item {
+        @include adaptiv-value("margin-bottom", 130, 40, 1);
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        @include adaptiv-value("font-size", 26, 18, 1);
+        line-height: 140%;
+        font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        gap: 140px;
+        @media(max-width:1399px) {
+            gap: 75px;
+        }
+        @media(max-width:1023px) {
+            gap: 35px;
+        }
+        @media(max-width:767px) {
+            flex-direction: column;
+            gap: 60px;
+        }
+    }
+
+    &__left {
+        @media(max-width:1023px) {
+            flex: 0 1 50%;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 30px;
+        font-family: $ff2, "Helvetica Neue", Helvetica, sans-serif;
+        @include adaptiv-value("font-size", 36, 24, 1);
+    }
+
+    &__text {
+        font-size: 17px;
+        @media(max-width:767px) {
+            font-size: 15px;
+        }
+    }
+
+    &__right {
+        flex: 0 0 520px/1320px * 100%;
+        @media(max-width:1023px) {
+            flex: 0 1 50%;
+        }
+    }
+
+    &__image {
+        border-radius: 20px 60px 0px; 
+        position: relative;
+        padding-bottom: 77%;
+        width: 100%;
+        @media(max-width:492px) {
+            padding-bottom: 400px;
+        }
+        img {
+            border-radius: 20px 60px 0px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+

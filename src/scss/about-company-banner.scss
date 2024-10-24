@@ -1,0 +1,138 @@
+.about-company-banner {
+    position: relative;
+    padding: 150px 0px;
+    margin: 20px 0px 75px 0px;
+    @media(max-width:1023px) {
+        margin: 0px 0px 45px 0px;
+    }
+   
+    &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        z-index: 1;
+        @media(max-width:767px) {
+            display: none;
+        }
+    }
+    @media(max-width:767px) {
+        background-color: #DBDCE0;
+        padding: 60px 0px 0px 0px;
+    }
+    &:before {
+        background-color: #DBDCE0;
+        left: 0;
+    }
+    &:after {
+        background: linear-gradient(90deg, #DBDCE0 -0.07%, rgba(219, 220, 224, 0) 60.39%);
+        right: 0;
+    }
+
+    &_2 {
+        &:before {
+            width: 44%;
+        }
+        &:after {
+            width: 36%;
+            right: inherit;
+            left: 44%;
+        }
+        .about-company-banner__video {
+            img, video {
+                width: 73%;
+                @media(max-width:767px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__logo {
+        margin-top: 20px;
+        @media(max-width:767px) {
+            img {
+                max-width: 138px;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        max-width: 50%;
+        @media(max-width:1023px) {
+            max-width: 75%;
+        }
+        @media(max-width:767px) {
+            padding-bottom: 60px;
+            max-width: 100%;
+        }
+    }
+
+    &__label {
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $gray;
+        line-height: 120%;
+        margin-bottom: 5px;
+        @media(max-width:492px) {
+            font-size: 12px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+    }
+
+    &__video {
+        @media(max-width:767px) {
+            position: relative;
+            padding-bottom: 230px;
+        }
+        img, video {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            object-fit: cover;
+            @media(max-width:767px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.main-banner {
+    margin: 0;
+    @media(max-width:767px) {
+        background: #F3EBE1;
+        text-align: center;
+        .about-company-banner__content {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    &:before {
+        background: #F3EBE1;
+        width: 53%;
+    }
+    &:after {
+        width: 26.98%;
+        right: inherit;
+        left: 53%;
+        background: linear-gradient(90deg, #F3EBE1 -0.07%, rgba(243, 235, 225, 0.84375) 28.93%, rgba(243, 235, 225, 0) 94.3%);
+    }
+}

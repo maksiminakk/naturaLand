@@ -1,0 +1,66 @@
+.error-page {
+    min-height: calc(100vh - 135px);
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    @media(max-width:1023px) {
+        min-height: 500px;
+        padding: 60px 0px 30px 0px;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        min-height: calc(100vh - 135px);
+        @media(max-width:1023px) {
+            min-height: 500px;
+            display: block;
+
+        }
+    }
+
+    &__body {
+       position: relative;
+       z-index: 2;
+
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        display: inline-flex;
+    }
+
+    &__video {
+        video, img {
+            position: absolute;
+            width: 1200px;
+            height: 650px;
+            right: 0;
+            bottom: 0;
+            @media(max-width:1023px) {
+                height: inherit;
+                width: 700px;
+                
+            }
+            @media(max-width:600px) {
+                position: static;
+                width: 100%;
+            }
+        }
+    }
+}
+.container {
+}
+.title {
+}
+.main-text {
+}
+.button {
+}

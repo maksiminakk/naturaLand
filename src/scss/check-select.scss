@@ -1,0 +1,70 @@
+.checkselect-popup {
+    opacity: 1; 
+    visibility: visible;
+    pointer-events: all;
+    transition: all 0.4s ease 0s;
+    transform: translate(0,0);
+    &._hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translate(0,50%);
+    }
+
+    
+}
+
+.checkselect-popup ~ .checkselect-control .checkselect__option  {
+    &:after {
+        transform: rotate(180deg);
+    }
+}
+
+.checkselect {
+    width: 100%;
+    position: relative;
+    &__input {
+        display: none;
+        &:checked ~ .checkselect__label:after {
+            transform: scale(1);
+        } 
+    }
+
+    
+
+    &__label {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        &:before, &:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            flex: 0 0 20px;
+            transition: all 0.4s ease 0s;
+        }
+        &:before {
+            border: 1px solid rgba(112, 112, 112, 0.2);
+            border-radius: 2px;
+        }
+        &:after {
+            background-image: url(../img/icons/check-select.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: scale(0);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.checkselect-popup {
+    legend {
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    
+}
